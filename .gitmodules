@@ -1,3 +1,6 @@
 [submodule "dotfiles/config/nvim"]
 	path = dotfiles/config/nvim
 	url = git@github.com:PyDevC/nvim.git
+[submodule "dotfiles/config/tmux"]
+	path = dotfiles/config/tmux
+	url = git@github.com:PyDevC/tmux.git
