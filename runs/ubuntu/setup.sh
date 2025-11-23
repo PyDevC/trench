@@ -1,9 +1,7 @@
 #!/usr/bin/env bash
 
-sudo apt install rofi tmux fzf -y
-bash ~/trench/install/clipboard.sh
-bash ~/trench/install/zsh.sh
-bash ~/trench/install/vim.sh
+sudo apt install curl zsh rofi tmux fzf -y
+sudo apt install -y vim luarocks xclip
 
 mkdir .config
 
