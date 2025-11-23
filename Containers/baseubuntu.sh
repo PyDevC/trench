@@ -8,5 +8,4 @@ podman exec baseubuntu apt update -y
 podman exec baseubuntu apt install git sudo -y
 podman exec baseubuntu usermod -aG sudo pydevc
 podman exec baseubuntu groups pydevc
-podman exec baseubuntu git clone https://github.com/PyDevC/trench.git /home/pydevc/trench
 podman commit baseubuntu baseubuntu
