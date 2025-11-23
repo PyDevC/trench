@@ -7,4 +7,5 @@ podman exec -it basefedora passwd pydevc
 podman exec basefedora dnf install sudo -y
 podman exec basefedora usermod -aG wheel pydevc
 podman exec basefedora groups pydevc
+podman exec git clone https://github.com/PyDevC/trench.git /home/pydevc/trench
 podman commit basefedora basefedora
