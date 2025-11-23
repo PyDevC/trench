@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+
+# $1 is os name or --help flag
+if [[ $1 == "--help" ]]; then
+    echo "Fedora"
+    ls ./runs/fedora
+    echo "Ubuntu"
+    ls ./runs/ubuntu
+    exit 0
+fi
+
+chmod +x ./runs/$1/*
+
+for sc in "${@:2}"; do
+    echo "ARG: $sc"
+    script="$(ls ./runs/$1 | grep $sc)"
+    if [[ -z "$script" ]]; then
+        echo "Only these scripts are available"
+        ls ./runs/$1
+    fi
+    echo "GREP: $script"
+    ./runs/$1/$script
+done

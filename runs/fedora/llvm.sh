@@ -4,7 +4,7 @@ sudo dnf install -y cmake make ninja-build lld clang ccache llvm git
 repoloc="$HOME/personal/github/llvm-project"
 
 if [[ ! -d $repoloc ]];then
-    mkdir $repoloc
+    mkdir -p $repoloc
     git clone https://github.com/llvm/llvm-project.git $repoloc
 fi
 

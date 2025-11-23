@@ -4,8 +4,9 @@
 podman run -d --name baseubuntu ubuntu sleep infinity
 podman exec baseubuntu useradd -m pydevc
 podman exec -it baseubuntu passwd pydevc
-podman exec baseubuntu apt install sudo -y
+podman exec baseubuntu apt update -y
+podman exec baseubuntu apt install git sudo -y
 podman exec baseubuntu usermod -aG sudo pydevc
 podman exec baseubuntu groups pydevc
-podman exec git clone https://github.com/PyDevC/trench.git /home/pydevc/trench
+podman exec baseubuntu git clone https://github.com/PyDevC/trench.git /home/pydevc/trench
 podman commit baseubuntu baseubuntu

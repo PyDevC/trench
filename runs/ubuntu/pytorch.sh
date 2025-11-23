@@ -19,10 +19,14 @@ python3 -m venv torch
 source torch/bin/activate
 popd 
 
-mkdir -p $HOME/personal/contrib/tdk/pytorch
-git clone git@github.com:PyDevC/AmazonMLChallenge.git $HOME/personal/contrib/tdk/pytorch
+repoloc="$HOME/personal/contrib/tdk/pytorch"
 
-pushd $HOME/personal/contrib/tdk/pytorch
+if [[ ! -d $repoloc ]];then
+    mkdir -p $repoloc
+    git clone git@github.com:PyDevC/pytorch.git $repoloc
+fi
+
+pushd $repoloc
 git submodule sync
 git submodule update --init --recursive
 pip install --group dev

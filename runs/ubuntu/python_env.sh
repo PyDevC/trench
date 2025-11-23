@@ -1,10 +1,11 @@
 #!/usr/bin/env bash
 
+envloc="$HOME/personal/env/python"
 sudo apt install python3-venv
-mkdir -p $HOME/personal/env/python
+mkdir -p $envloc
 
-pushd $HOME/personal/env/python
+pushd $envloc
 python3 -m venv $1
-source $HOME/personal/env/python/$1/bin/activate
+source $envloc/$1/bin/activate
 pip install --upgrade pip
 popd

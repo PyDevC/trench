@@ -4,7 +4,7 @@ sudo apt install cmake make ninja-build llvm lld clang ccache build-essential gi
 repoloc="$HOME/personal/github/llvm-project"
 
 if [[ ! -d $repoloc ]];then
-    mkdir $repoloc
+    mkdir -p $repoloc
     git clone https://github.com/llvm/llvm-project.git $repoloc
 fi
 

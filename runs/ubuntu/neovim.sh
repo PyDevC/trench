@@ -5,19 +5,19 @@ if [[ ! -z $1 ]];then
     version=$1
 fi
 
-loc=$HOME/personal/github/neovim
+repoloc=$HOME/personal/github/neovim
 
 sudo apt -y install ninja-build cmake gcc make gettext curl glibc-gconv-extra git lua
 
-if [[ ! -d $loc ]];then
-    mkdir $loc
-    git clone https://github.com/neovim/neovim.git $loc
+if [[ ! -d $repoloc ]];then
+    mkdir $repoloc
+    git clone https://github.com/neovim/neovim.git $repoloc
 else
     git fetch --all
     git pull --all
 fi
 
-pushd $loc
+pushd $repoloc
 git checkout $version
 
 make clean
