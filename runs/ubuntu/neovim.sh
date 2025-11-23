@@ -7,7 +7,7 @@ fi
 
 repoloc=$HOME/personal/github/neovim
 
-sudo apt -y install ninja-build cmake gcc make gettext curl glibc-gconv-extra git lua
+sudo apt -y install ninja-build cmake gcc make gettext curl git lua5.1
 
 if [[ ! -d $repoloc ]];then
     mkdir $repoloc
