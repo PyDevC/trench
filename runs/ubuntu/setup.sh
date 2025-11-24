@@ -18,3 +18,7 @@ ln -s ~/trench/dotfiles/zsh/.zsh_profile ~/.zsh_profile
 . ~/.zshrc
 cp -r ~/trench/dotfiles/config/nvim ~/.config/nvim
 cp -r ~/trench/dotfiles/config/tmux ~/.config/tmux
+
+sudo apt-get install -y locales
+sudo locale-gen en_US.UTF-8
+LANG="en_US.UTF-8" LANGUAGE="en_US:en" LC_ALL="en_US.UTF-8"
