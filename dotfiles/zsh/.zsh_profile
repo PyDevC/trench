@@ -5,7 +5,7 @@ export XDG_CONFIG_HOME=$HOME/.config
 export GIT_EDITOR=$VIM
 export DOTFILES=$HOME/.dot
 export EDITOR=$VIM
-
+export LANG="en_US.UTF-8" LANGUAGE="en_US:en" LC_ALL="en_US.UTF-8"
 
 addToPath() { 
     # adds at the back of the path thus getting lower priority if something having same name is in front of the path
