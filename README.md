@@ -20,11 +20,28 @@ Right now, Fedora 43 doesn't support many features. I'm either going to leave it
 ## Docs
 
 > Building Sphinx docs in future
+Check `docs/` for docs
 
 ## Scripts
+
+### tmux-sessionizer
+
+This is tmux-sessionizer script borrowed from ThePrimeagen.
+
+After invoking zsh you can use ctrl-f to start the tmux-sessionizer script and select one of directory on your system and start the session based on the directory name.
+
+### cht
+
+This is another script copied from ThePrimeagen.
+
+This is to be used within the tmux, This script grabs your language specific queries from cht.sh website.
 
 > I will be adding a lots of scripts here from my [dotfiles](https://github.com/PyDevC/.dot)
 
 ## Installation
 
-> TBA
+clone this repository in your home directory.
+
+run `install.sh` to get basic setup.
+
+To create base container run one of the scripts in Container directory. Then install packages in containers with `containerinstall.sh`
