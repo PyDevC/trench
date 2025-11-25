@@ -6,14 +6,14 @@ echo $conttype
 
 if [[ $conttype == "devenv" ]]; then
     read -p "Enter Container os name[ubuntu/fedora]: " os
-    run $os build neovim rocm setup core llama vulkan
-    runs/$os/python_env.sh ml pandas scikit-learn numpy matplotlib
+    ./run $os build neovim rocm setup core llama vulkan
+    ./runs/$os/python_env.sh ml pandas scikit-learn numpy matplotlib
 elif [[ $conttype == "pytorch" ]]; then
-    run setup pytorch rocm neovim buildsystem
+    ./run setup pytorch rocm neovim buildsystem
 elif [[ $conttype == "general" ]]; then
-    run fedora firefox gimp setup
+    ./run fedora firefox gimp setup
 elif [[ $conttype == "remoteuser" ]]; then
-    run setup
+    ./run setup
 elif [[ $conttype == "llvm" ]]; then
-    run ubuntu llvm setup buildsystem neovim
+    ./run ubuntu llvm setup buildsystem neovim
 fi
