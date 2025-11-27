@@ -15,18 +15,19 @@ conda activate torchdev
 
 mkdir -p $HOME/personal/env/python
 pushd $HOME/personal/env/python
-python3 -m venv torch
+python3 -m venv torchsetup
 source torch/bin/activate
 popd 
 
 repoloc="$HOME/personal/contrib/tdk/pytorch"
 
 if [[ ! -d $repoloc ]];then
-    mkdir -p $repoloc
+    mkdir -p "$HOME/personal/contrib/tdk"
     git clone git@github.com:PyDevC/pytorch.git $repoloc
 fi
 
 pushd $repoloc
+source ~/personal/env/python/torch/bin/activate
 git submodule sync
 git submodule update --init --recursive
 pip install --group dev
