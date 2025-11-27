@@ -9,11 +9,11 @@ if [[ $conttype == "devenv" ]]; then
     ./run $os build neovim rocm setup core llama vulkan
     ./runs/$os/python_env.sh ml pandas scikit-learn numpy matplotlib
 elif [[ $conttype == "pytorch" ]]; then
-    ./run setup pytorch rocm neovim buildsystem
+    ./run ubuntu setup pytorch rocm neovim buildsystem
 elif [[ $conttype == "general" ]]; then
     ./run fedora firefox gimp setup
 elif [[ $conttype == "remoteuser" ]]; then
-    ./run setup
+    ./run fedora setup
 elif [[ $conttype == "llvm" ]]; then
     ./run ubuntu llvm setup buildsystem neovim
 fi
