@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-sudo dnf install -y neovim luarocks
+sudo dnf install -y neovim luarocks ripgrep
