@@ -11,18 +11,18 @@ if [[ $conttype == "devenv" ]]; then
     elif [[ $os == "fedora" ]]; then
         sudo dnf update -y
     fi
-    ./run $os build neovim rocm setup core llama vulkan
+    ./run $os build neovim rocm setup core llama vulkan ghostty
     ./runs/$os/python_env.sh ml pandas scikit-learn numpy matplotlib
 elif [[ $conttype == "pytorch" ]]; then
     sudo apt update -y
-    ./run ubuntu setup pytorch rocm neovim buildsystem
+    ./run ubuntu setup pytorch rocm neovim buildsystem ghostty
 elif [[ $conttype == "general" ]]; then
     sudo dnf update -y
     ./run fedora firefox gimp setup
 elif [[ $conttype == "remoteuser" ]]; then
     sudo dnf update -y
-    ./run fedora setup
+    ./run fedora setup ghostty
 elif [[ $conttype == "llvm" ]]; then
     sudo apt update -y
-    ./run ubuntu llvm setup buildsystem neovim
+    ./run ubuntu llvm setup buildsystem neovim ghostty
 fi
