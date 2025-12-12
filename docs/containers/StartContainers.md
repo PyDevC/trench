@@ -26,17 +26,33 @@ podman run -it --name torchwork -e DISPLAY=$DISPLAY \
     --device /dev/snd --device /dev/kfd --device /dev/dri \
     --user pydevc \
     --userns=keep-id \
-    --security-opt seccomp=unconfined label=disable localhost/baseubuntu:latest bash
+    --security-opt seccomp=unconfined --security-opt label=disable localhost/baseubuntu:latest bash
 ```
 
 ## DevEnv Container
 
-DevEnv container uses most of the development tools and is only cli based, hence no X11 forwarding is required but inorder to avoid any future trouble we allow it.
+DevEnv container uses most of the development tools and ghostty, hence X11 forwarding is required.
 
+```bash
+podman run -it --name devenv -e DISPLAY=$DISPLAY \
+    -v /tmp/.X11-unix:/tmp/.X11-unix \
+    --device /dev/snd --device /dev/kfd --device /dev/dri \
+    --user pydevc \
+    --userns=keep-id \
+    --security-opt seccomp=unconfined --security-opt label=disable localhost/basefedora:latest bash
+```
 ## LLVM Container
 
 LLVM Container is just for building compilers or testing LLVM builds.
 
+```bash
+podman run -it --name llvmwork -e DISPLAY=$DISPLAY \
+    -v /tmp/.X11-unix:/tmp/.X11-unix \
+    --device /dev/snd --device /dev/kfd --device /dev/dri \
+    --user pydevc \
+    --userns=keep-id \
+    --security-opt seccomp=unconfined --security-opt label=disable localhost/baseubuntu:latest bash
+```
 ## RemoteUser Container
 
 This is a special container that will be used for remote logins only, we will use tailscale to connect to internet and allow me to connect via ssh.
