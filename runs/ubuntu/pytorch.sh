@@ -1,6 +1,20 @@
 #!/usr/bin/env bash
 
-sudo apt install wget git gcc clang cmake meson ninja-build python3-venv
+sudo apt-get update 
+sudo apt-get install -y \
+        wget \
+        build-essential \
+        ca-certificates \
+        clang \
+        python3-venv \
+        ccache \
+        cmake \
+        curl \
+        git \
+        meson \
+        ninja-build \
+        libjpeg-dev \
+        libpng-dev && \
 
 mkdir -p ~/miniconda3
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda3/miniconda.sh
