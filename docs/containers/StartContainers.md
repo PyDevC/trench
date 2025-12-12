@@ -10,7 +10,7 @@ We also need to connect device /dev/snd inorder to allow sound from things like 
 ```bash
 podman run -it --name general -e DISPLAY=$DISPLAY \
     -v /tmp/.X11-unix:/tmp/.X11-unix \
-    --device /dev/snd \
+    --device /dev/snd --device /dev/kfd --device /dev/dri \
     --user pydevc \
     --userns=keep-id \
     --security-opt label=disable localhost/basefedora:latest bash
@@ -23,10 +23,10 @@ pytorch container uses ROCm which requires some usage of kernel and other device
 ```bash
 podman run -it --name torchwork -e DISPLAY=$DISPLAY \
     -v /tmp/.X11-unix:/tmp/.X11-unix \
-    --device /dev/snd --device /dev/kfd \
+    --device /dev/snd --device /dev/kfd --device /dev/dri \
     --user pydevc \
     --userns=keep-id \
-    --security-opt label=disable localhost/baseubuntu:latest bash
+    --security-opt seccomp=unconfined label=disable localhost/baseubuntu:latest bash
 ```
 
 ## DevEnv Container
@@ -35,7 +35,7 @@ DevEnv container uses most of the development tools and is only cli based, hence
 
 ## LLVM Container
 
-LLVM Conatiner is just for building compilers or testing LLVM builds.
+LLVM Container is just for building compilers or testing LLVM builds.
 
 ## RemoteUser Container
 
