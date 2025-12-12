@@ -3,6 +3,11 @@
 git submodule init
 git submodule update
 
+if [[ ! -z "$(which podman)" ]]; then
+    echo "This is a container"
+    exit 0
+fi
+
 printf "Types of container installs:\npytorch\ndevenv\ngeneral\nllvm\nremoteuser\n"
 read -p "Enter one of the container type: " conttype
 echo $conttype
