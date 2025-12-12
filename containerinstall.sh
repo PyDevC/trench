@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+git submodule init
+git submodule update
+
 printf "Types of container installs:\npytorch\ndevenv\ngeneral\nllvm\nremoteuser\n"
 read -p "Enter one of the container type: " conttype
 echo $conttype
