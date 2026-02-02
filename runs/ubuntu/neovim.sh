@@ -5,7 +5,7 @@ if [[ ! -z $1 ]];then
     version=$1
 fi
 
-repoloc=$HOME/personal/github/neovim
+repoloc=$HOME/neovim
 
 sudo apt -y install ninja-build cmake gcc make gettext curl git lua5.1 npm ripgrep
 
