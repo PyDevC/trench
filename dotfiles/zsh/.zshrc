@@ -104,4 +104,4 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-. ~/.zsh_profile # source zsh_profile
+. ./.zsh_profile # source zsh_profile

@@ -32,7 +32,8 @@ addToPath $HOME/.dot/bin
 addToPathFront $HOME/trench/
 addToPathFront $HOME/bin
 
-bindkey -s ^f "tmux-sessionizer\n"
+alias cdd='cd "$(fuzzy)"'
+bindkey -s ^f 'cdd' 
 bindkey -s ^b "tmux attach\n"
 
 # Alias
