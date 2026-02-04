@@ -2,7 +2,7 @@
 
 select_location(){
     local selected
-    selected=$(find $HOME -mindepth 1 -maxdepth 4 -type d | fzf +m --height 50% --style full --input-label ' Destination ' --preview 'tree -C {}')
+    selected=$(find $HOME -mindepth 1 -maxdepth 4 -type d | fzf)
     echo "$selected"
 }
 
