@@ -1,11 +1,9 @@
 #!/usr/bin/env bash
 
-sudo dnf install -y git cmake make gcc-c++ mesa-vulkan-drivers vulkan-loader vulkan-headers glslang-tools spirv-tools libcurl-devel ccache
+sudo dnf install -y git cmake make gcc-c++ mesa-vulkan-drivers vulkan-loader vulkan-headers gslang spirv-tools libcurl-devel ccache openssl-devel
 repoloc="$HOME/personal/github/llama.cpp"
 
 mkdir -p $repoloc
-
-git clone https://github.com/ggerganov/llama.cpp.git $repoloc
 
 pushd $repoloc
 mkdir build
