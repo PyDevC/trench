@@ -20,4 +20,5 @@ for sc in "${@:2}"; do
     fi
     echo "GREP: $script"
     ./runs/$1/$script
+    notify-send "Process Completed: $sc" "Ended with $(echo $?)"
 done
