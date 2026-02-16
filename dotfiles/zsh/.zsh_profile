@@ -33,7 +33,7 @@ addToPathFront $HOME/trench/
 addToPathFront $HOME/bin
 
 alias cdd='cd "$(fuzzy)"'
-bindkey -s ^f 'cdd' 
+bindkey -s ^f 'cdd\n' 
 bindkey -s ^b "tmux attach\n"
 
 # Alias
