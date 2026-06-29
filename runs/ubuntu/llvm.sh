@@ -1,4 +1,4 @@
-#!/usr/bin/env bas
+#!/usr/bin/env bash
 
 sudo apt install cmake make ninja-build llvm lld clang ccache build-essential git -y
 repoloc="$HOME/personal/github/llvm-project"
