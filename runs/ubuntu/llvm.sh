@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+suto apt update -y
 sudo apt install cmake make ninja-build llvm lld clang ccache build-essential git -y
 repoloc="$HOME/personal/github/llvm-project"
 
@@ -9,9 +10,9 @@ if [[ ! -d $repoloc ]];then
 fi
 
 mkdir -p $repoloc/build
-pushd $repoloc/build
-cmake -G Ninja ../llvm \
-    -DCMAKE_BUILD_TYPE=RelWithDebInfo \
+pushd $repoloc
+
+cmake -G Ninja -Bbuild llvm \
     -DCMAKE_BUILD_TYPE=Release \
     -DCMAKE_CXX_COMPILER=clang++ \
     -DCMAKE_C_COMPILER=clang \

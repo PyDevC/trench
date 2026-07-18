@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+sudo dnf update -y
 sudo dnf install -y cmake make ninja-build lld clang ccache llvm git
 repoloc="$HOME/personal/github/llvm-project"
 

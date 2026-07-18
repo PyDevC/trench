@@ -13,6 +13,7 @@ log(){
 }
 
 log "prerequisites"
+suto apt update -y
 sudo apt install git wget gnupg sudo
 
 log "python dependences"

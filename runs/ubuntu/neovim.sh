@@ -7,7 +7,8 @@ fi
 
 repoloc=$HOME/neovim
 
-sudo apt -y install ninja-build cmake gcc make gettext curl git lua5.1 npm ripgrep
+sudo apt update -y
+sudo apt -y install ninja-build cmake gcc make gettext curl git lua5.1 npm ripgrep luarocks
 
 if [[ ! -d $repoloc ]];then
     mkdir -p $HOME/personal/github

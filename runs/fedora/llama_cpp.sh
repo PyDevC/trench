@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+sudo dnf update -y
 sudo dnf install -y git cmake make gcc-c++ mesa-vulkan-drivers vulkan-loader vulkan-headers gslang spirv-tools libcurl-devel ccache openssl-devel glslc
 repoloc="$HOME/personal/github/llama.cpp"
 
